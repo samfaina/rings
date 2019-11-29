@@ -1,4 +1,4 @@
-package com.lalongooo.rings;
+package com.samfaina.rings;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
