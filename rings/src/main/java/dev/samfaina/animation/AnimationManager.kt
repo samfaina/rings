@@ -50,7 +50,6 @@ class AnimationManager(var chart: Chart, var listener: AnimationListener?) {
         }
         val progress = valueAnimator.getAnimatedValue(ANIM_NAME) as Float
         ring.progressAnimValue = progress
-        Log.d(ring.text, progress.toString())
         lastValue = progress
         listener?.onAnimationUpdated(progress)
     }

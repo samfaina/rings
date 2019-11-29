@@ -98,6 +98,7 @@ class RingsView(context: Context, attrs: AttributeSet) : View(context, attrs), C
 
     fun setDataset(rings: List<Ring>) {
         chart.dataSet = rings
+        requestLayout()
         post {
             chartManager.animate()
         }
