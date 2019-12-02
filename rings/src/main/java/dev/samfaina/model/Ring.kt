@@ -7,8 +7,11 @@ import dev.samfaina.utils.getArcProgress
 
 class Ring {
     var text: String = ""
+    var percentage: Float = 0f
+        private set
     var progress: Float = 0f
         set(value) {
+            percentage = value
             field = getArcProgress(value)
         }
 
@@ -22,7 +25,7 @@ class Ring {
 
 
     override fun toString(): String {
-        return "Ring(text='$text', progress=$progress, filledColor=$filledColor, unfinishedColor=$unfinishedColor, highlighted=$highlighted, ringRect=$ringRect, ringTextRect=$ringTextRect, progressAnimValue=$progressAnimValue)"
+        return "Ring(text='$text', percentage=$percentage, progress=$progress, filledColor=$filledColor, unfinishedColor=$unfinishedColor, highlighted=$highlighted, ringRect=$ringRect, ringTextRect=$ringTextRect, progressAnimValue=$progressAnimValue)"
     }
 
 

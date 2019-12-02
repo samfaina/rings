@@ -65,8 +65,6 @@ class DrawController(private var chart: Chart) {
         ringPaint.color = ring.filledColor
 
         if (ring.highlighted) {
-            Log.d("OUTTER", chart.attrs.outerStrokeWidth.toString())
-            Log.d("HIGHLIGHT", chart.attrs.highlightWidth.toString())
             ringPaint.strokeWidth = chart.attrs.highlightWidth
         } else {
             ringPaint.strokeWidth = chart.attrs.innerStrokeWidth
