@@ -56,14 +56,16 @@ class RingsView(context: Context, attrs: AttributeSet) : View(context, attrs), C
 
             when (event.action) {
                 MotionEvent.ACTION_UP -> {
-                    for (ring in chart.dataSet) {
+                    var selectedRing: Ring? = null
+                    loop@ for (ring in chart.dataSet) {
                         ring.highlighted = isOnRing(event, ring.ringRect, chart.attrs.outerStrokeWidth) && isInSweep(event, ring.ringRect)
                                 || ring.ringTextRect.contains(event.x, event.y)
                         if (ring.highlighted) {
-                            listener?.onHighlight(ring)
+                            selectedRing = ring
+                            break@loop
                         }
-
                     }
+                    listener?.onHighlight(selectedRing)
 
                     invalidate()
                 }
@@ -110,7 +112,7 @@ class RingsView(context: Context, attrs: AttributeSet) : View(context, attrs), C
 
 
     interface OnHighlightListener {
-        fun onHighlight(ring: Ring) = Unit
+        fun onHighlight(ring: Ring?) = Unit
     }
 
 }

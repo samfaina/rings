@@ -2,10 +2,12 @@ package dev.samfaina.model
 
 import android.graphics.Color
 import android.graphics.RectF
+import android.os.Parcelable
 import dev.samfaina.utils.getArcProgress
+import kotlinx.android.parcel.Parcelize
 
-
-class Ring {
+@Parcelize
+class Ring : Parcelable {
     var text: String = ""
     var percentage: Float = 0f
         private set
