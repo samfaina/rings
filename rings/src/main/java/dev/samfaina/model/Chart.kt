@@ -23,7 +23,8 @@ class Chart(context: Context, attributes: TypedArray) {
                 attributes.getDimension(R.styleable.RingsView_rings_outer_stroke_width, sp2px(context.resources, DefaultValues.DEFAULT_OUTER_STROKE_WIDTH)),
                 attributes.getDimension(R.styleable.RingsView_rings_outer_stroke_width_unfinished, sp2px(context.resources, DefaultValues.DEFAULT_OUTER_STROKE_UNFINISHED_WIDTH)),
                 attributes.getColor(R.styleable.RingsView_rings_unfinished_color, DefaultValues.DEFAULT_RING_UNFINISHED_COLOR),
-                attributes.getColor(R.styleable.RingsView_rings_default_filled_color, DefaultValues.DEFAULT_RING_COLOR)
+                attributes.getColor(R.styleable.RingsView_rings_default_filled_color, DefaultValues.DEFAULT_RING_COLOR),
+                attributes.getDimension(R.styleable.RingsView_rings_outer_stroke_width, sp2px(context.resources, DefaultValues.DEFAULT_OUTER_STROKE_WIDTH) ) + sp2px(context.resources, 1f)
         )
     }
 

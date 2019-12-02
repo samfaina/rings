@@ -19,7 +19,8 @@ class MainActivity : Activity() {
         ringsView.setDataset(mutableListOf(
                 RingBuilder().setText("Javascript").setProgress(85f).setFilledColor(ContextCompat.getColor(this,R.color.colorAccent)).build(),
                 RingBuilder().setText("PHP").setProgress(12f).setFilledColor(ContextCompat.getColor(this,R.color.colorPrimary)).build(),
-                RingBuilder().setText("Java").setProgress(54f).setFilledColor(ContextCompat.getColor(this,R.color.colorPrimaryDark)).build()
+                RingBuilder().setText("Java").setProgress(54f).setFilledColor(ContextCompat.getColor(this,R.color.colorPrimaryDark)).build(),
+                RingBuilder().setText("Dart").setProgress(66f).setFilledColor(ContextCompat.getColor(this,android.R.color.holo_orange_light)).build()
         ))
 
         ringsView.addOnHighlightListener(object : RingsView.OnHighlightListener {

@@ -8,14 +8,19 @@
 
     <dev.samfaina.RingsView
         android:id="@+id/rings"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rings_text_size="20sp"
-        app:rings_unfinished_color="#666" />
+        app:rings_unfinished_color="#666"
+
+        app:rings_inner_stroke_width="5dp"
+        app:rings_inner_stroke_width_unfinished="5dp"
+        app:rings_outer_stroke_width="5dp"
+        app:rings_outer_stroke_width_unfinished="5dp"
+        app:rings_text_size="11sp"/>
 
 
 </android.support.constraint.ConstraintLayout>

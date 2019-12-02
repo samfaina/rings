@@ -12,5 +12,6 @@ data class Attrs(
         var outerStrokeWidth: Float = 0f,
         var outerStrokeWidthUnfinished: Float = 0f,
         var ringUnfinishedColor: Int = 0,
-        var ringFilledColor: Int = 0
+        var ringFilledColor: Int = 0,
+        var highlightWidth: Float = 0f
 )

@@ -3,6 +3,7 @@ package dev.samfaina.draw
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
+import android.util.Log
 import dev.samfaina.model.Chart
 import dev.samfaina.model.Ring
 import dev.samfaina.utils.AngleValues.Companion.EMPTY_ANGLE
@@ -64,7 +65,9 @@ class DrawController(private var chart: Chart) {
         ringPaint.color = ring.filledColor
 
         if (ring.highlighted) {
-            ringPaint.strokeWidth = chart.attrs.outerStrokeWidth
+            Log.d("OUTTER", chart.attrs.outerStrokeWidth.toString())
+            Log.d("HIGHLIGHT", chart.attrs.highlightWidth.toString())
+            ringPaint.strokeWidth = chart.attrs.highlightWidth
         } else {
             ringPaint.strokeWidth = chart.attrs.innerStrokeWidth
         }
